@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/16 19:43:43 by zfarah            #+#    #+#             */
-/*   Updated: 2025/05/17 09:22:23 by zfarah           ###   ########.fr       */
+/*   Created: 2025/05/16 19:43:58 by zfarah            #+#    #+#             */
+/*   Updated: 2025/05/17 09:19:54 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	save_remaining_data(char *buffer, char *ptr_line);
 
 char	*get_next_line(int fd)
 {
-	static char	buffer[BUFFER_SIZE + 1];
+	static char	buffers[1024][BUFFER_SIZE + 1];
 	char		*line;
 	char		*dump;
 	int			malloc_fail;
@@ -29,14 +29,14 @@ char	*get_next_line(int fd)
 	line = NULL;
 	if (fd < 0 || fd > 1023 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (buffer[0])
-		line = get_line(buffer, NULL, NULL, &malloc_fail);
+	if (buffers[fd][0])
+		line = get_line(buffers[fd], NULL, NULL, &malloc_fail);
 	if (line || malloc_fail)
 		return (line);
-	dump = ft_substr(buffer, 0, BUFFER_SIZE + 1);
+	dump = ft_substr(buffers[fd], 0, BUFFER_SIZE + 1);
 	if (!dump)
 		return (NULL);
-	line = get_first_line(buffer, &dump, fd, &malloc_fail);
+	line = get_first_line(buffers[fd], &dump, fd, &malloc_fail);
 	free(dump);
 	return (line);
 }
