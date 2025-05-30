@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "standard.h"
 
 void	*ft_calloc(size_t nitems, size_t size)
 {

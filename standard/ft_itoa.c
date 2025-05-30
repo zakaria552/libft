@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "standard.h"
 
 static int	str_num_length(int num)
 {
