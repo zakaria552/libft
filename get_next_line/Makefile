@@ -11,4 +11,4 @@ all: $(OBJ)
 clean:
 	rm -f $(OBJ)
 
-re: fclean all
+re: clean all
