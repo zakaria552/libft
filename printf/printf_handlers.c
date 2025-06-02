@@ -6,7 +6,7 @@
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:22:57 by zfarah            #+#    #+#             */
-/*   Updated: 2025/05/14 09:32:16 by zfarah           ###   ########.fr       */
+/*   Updated: 2025/06/02 12:36:12 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ int	print_hex_case(unsigned long num, bool capitalize)
 
 	if (num == 0)
 		return (print_c('0'));
-	hexs = ft_calloc((sizeof(unsigned long) * CHAR_BIT) / 4 + 1, sizeof(char),
-			'\0');
+	hexs = ft_calloc((sizeof(unsigned long) * CHAR_BIT) / 4 + 1, sizeof(char));
 	if (!hexs)
 		return (-1);
 	a = 'a';
