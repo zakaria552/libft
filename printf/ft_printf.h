@@ -6,7 +6,7 @@
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:24:49 by zfarah            #+#    #+#             */
-/*   Updated: 2025/05/14 09:59:18 by zfarah           ###   ########.fr       */
+/*   Updated: 2025/06/02 13:05:39 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include "../libft.h"
 
 // main function
 int		ft_printf(const char *str, ...);
@@ -30,12 +31,5 @@ int		print_int(int num);
 int		print_unsigned_int(unsigned int num);
 int		print_hex_case(unsigned long num, bool capitalized);
 void	rev_hex_str(char *str);
-
-// libft
-size_t	ft_strlen(const char *s);
-char	*ft_uitoa(unsigned int num);
-char	*ft_itoa(int num);
-void	*ft_memset(void *s, int c, size_t n);
-void	*ft_calloc(size_t nitems, size_t size, char c);
 
 #endif
