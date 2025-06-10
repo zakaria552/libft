@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 19:43:58 by zfarah            #+#    #+#             */
-/*   Updated: 2025/05/17 09:19:54 by zfarah           ###   ########.fr       */
+/*   Updated: 2025/06/10 14:56:32 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static char	*get_line(char *buffer, char **dump, char *chunk, int *malloc_fail);
 static char	*get_first_line(char *buffer, char **dump, int fd,
 				int *malloc_fail);
-static void	*ft_memset(void *s, int c, size_t n);
 static void	save_remaining_data(char *buffer, char *ptr_line);
 
 char	*get_next_line(int fd)
@@ -97,18 +96,6 @@ static char	*get_first_line(char *buffer, char **dump, int fd, int *malloc_fail)
 	return (NULL);
 }
 
-static void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)s)[i] = (unsigned char)c;
-		i++;
-	}
-	return (s);
-}
 
 static void	save_remaining_data(char *buffer, char *ptr_line)
 {
