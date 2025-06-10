@@ -1,4 +1,4 @@
-FILES=get_next_line.c get_next_line_utils.c
+FILES=get_next_line.c
 OBJ=$(addprefix ../obj/, $(FILES:.c=.o))
 FLAGS = -Wall -Wextra -Werror
 CC = cc
