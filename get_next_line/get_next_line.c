@@ -6,7 +6,7 @@
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/16 19:43:58 by zfarah            #+#    #+#             */
-/*   Updated: 2025/06/10 14:56:32 by zfarah           ###   ########.fr       */
+/*   Updated: 2025/06/13 14:19:03 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,6 @@ static char	*get_first_line(char *buffer, char **dump, int fd, int *malloc_fail)
 	}
 	return (NULL);
 }
-
 
 static void	save_remaining_data(char *buffer, char *ptr_line)
 {
