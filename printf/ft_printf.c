@@ -6,7 +6,7 @@
 /*   By: zfarah <zfarah@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 14:22:41 by zfarah            #+#    #+#             */
-/*   Updated: 2025/05/17 10:16:41 by zfarah           ###   ########.fr       */
+/*   Updated: 2025/06/13 14:23:54 by zfarah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_printf(const char *str, ...)
 		if (prev_len > len)
 		{
 			len = -1;
-			break;
+			break ;
 		}
 		i++;
 	}
