@@ -1,6 +1,6 @@
 CC = cc 
 NAME = libft
-MODULES = standard printf linked_list get_next_line
+MODULES = standard printf linked_list get_next_line queue
 OBJDIR = ./obj
 OBJFILES = $(OBJDIR)/*.o
 
